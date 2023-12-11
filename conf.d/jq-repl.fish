@@ -10,6 +10,10 @@ function __get_query
 end
 
 function _jq_complete
+  if string match -q "*yaml*" (commandline -b)
+    set -x JQ_REPL_JQ "gojq --yaml-input"
+    set -x JQ_REPL_ARGS "--yaml-output"
+  end
   set -l query (__get_query)
   set -l result $status
   test -z "$JQ_REPL_JQ"; and set -l JQ_REPL_JQ jq

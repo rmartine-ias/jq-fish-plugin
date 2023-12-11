@@ -31,6 +31,8 @@ Besides [jq](https://stedolan.github.io/jq/), this plugin also requires
 [fzf](https://github.com/junegunn/fzf#installation) ([a recent version](https://github.com/reegnz/jq-zsh-plugin/issues/19)) to be installed and available on your
 PATH.
 
+For automatic `yaml` support, install `gojq` as well.
+
 ### [Fisher](https://github.com/jorgebucaran/fisher)
 
 ```shell
