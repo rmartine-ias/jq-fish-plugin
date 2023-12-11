@@ -1,9 +1,12 @@
-# jq zsh plugin
+# jq fish plugin
 
 Interactively build [jq](https://stedolan.github.io/jq/) expressions
 ([gojq](https://github.com/itchyny/gojq) is also supported).
 
-This zsh plugin gives you jq superpowers!
+This fish plugin gives you jq superpowers! (See also: [upstream zsh
+plugin](https://github.com/reegnz/jq-zsh-plugin).)
+
+This fish fork is not as well tested yet!
 
 ## Table of contents
 
@@ -28,48 +31,10 @@ Besides [jq](https://stedolan.github.io/jq/), this plugin also requires
 [fzf](https://github.com/junegunn/fzf#installation) ([a recent version](https://github.com/reegnz/jq-zsh-plugin/issues/19)) to be installed and available on your
 PATH.
 
-The following installation methods are proven to work:
+### [Fisher](https://github.com/jorgebucaran/fisher)
 
-* [Oh My Zsh](#oh-my-zsh)
-* [zplug](#zplug)
-* [Antigen](#antigen)
-* [Zgen](#zgen)
-
-### [Oh My Zsh](https://ohmyz.sh)
-
-1. Clone the repository:
-
-```sh
-git clone https://github.com/reegnz/jq-zsh-plugin.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/jq
-```
-
-2. Add the plugin to the list of plugins for Oh My Zsh to load (inside `~/.zshrc`):
-
-```sh
-plugins=(
-	# other plugins...
-	jq
-)
-```
-
-3. Start a new terminal session.
-
-### [zplug](https://github.com/zplug/zplug)
-
-```sh
-zplug reegnz/jq-zsh-plugin
-```
-
-### [Antigen](https://github.com/zsh-users/antigen)
-
-```sh
-antigen bundle reegnz/jq-zsh-plugin
-```
-
-### [Zgen](https://github.com/tarjoilija/zgen)
-
-```sh
-zgen load reegnz/jq-zsh-plugin
+```shell
+fisher install rmartine-ias/fish-jq-plugin
 ```
 
 ## Usage
@@ -112,9 +77,7 @@ JQ_REPL_JQ=gojq
 
 The project consists of the following components:
 
-- a `jq.plugin.zsh` providing a [user-defined zsh line-editor
-  widget](https://zsh.sourceforge.io/Doc/Release/Zsh-Line-Editor.html),
-  utilizing the `jq-repl` command
+- a `fish` plugin providing a line-editor widget, utilizing the `jq-repl` command
 - a `jq-repl` command to interactively build jq expressions, utilizing fzf for
   its UI
 - a `jq-paths` command to get all valid jq paths in the provided JSON document,
@@ -139,13 +102,4 @@ Another option is to map to `ctrl+j` instead by putting this in your `.zshrc`:
 
 ```sh
 bindkey `^j` jq-complete
-```
-
-### Disable expanding shell aliases
-
-The plugin automatically expands shell aliases in a command before passing it
-to `jq-repl`. To disable, put the following line into your `.zshrc`:
-
-```sh
-JQ_ZSH_PLUGIN_EXPAND_ALIASES=0
 ```
