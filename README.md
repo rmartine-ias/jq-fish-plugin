@@ -34,7 +34,7 @@ PATH.
 ### [Fisher](https://github.com/jorgebucaran/fisher)
 
 ```shell
-fisher install rmartine-ias/fish-jq-plugin
+fisher install rmartine-ias/jq-fish-plugin
 ```
 
 ## Usage
