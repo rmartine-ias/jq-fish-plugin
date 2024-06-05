@@ -20,7 +20,7 @@ function _jq_complete
   if test -n "$query"
     set -l LBUFFER (__lbuffer_strip_trailing_pipe) " | $JQ_REPL_JQ"
     test -z "$JQ_REPL_ARGS"; or set -la LBUFFER $JQ_REPL_ARGS
-    set -l LBUFFER "$LBUFFER $query"
+    set -l LBUFFER "$LBUFFER '$query'"
     commandline -r "$LBUFFER"
   end
   commandline -f repaint
