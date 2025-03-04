@@ -10,7 +10,7 @@ function __get_query
 end
 
 function _jq_complete
-  if string match -q "*yaml*" (commandline -b)
+  if string match -q -r ".*ya?ml.*" (commandline -b)
     set -x JQ_REPL_JQ "gojq --yaml-input"
     set -x JQ_REPL_ARGS "--yaml-output"
   end
