@@ -5,6 +5,7 @@ function __lbuffer_strip_trailing_pipe
 end
 
 function __get_query
+    set --local --export --prepend PATH $__fish_config_dir/conf.d/jq_repl_bin
     jq-repl -- $(__lbuffer_strip_trailing_pipe)
     return $status
 end
@@ -29,5 +30,3 @@ end
 
 bind --mode insert \ej _jq_complete
 bind --mode default \ej _jq_complete
-
-fish_add_path $__fish_config_dir/conf.d/jq_repl_bin
