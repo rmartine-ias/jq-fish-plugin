@@ -59,6 +59,10 @@ During interactive querying, the following shortcuts can be used:
 | `ctrl+k` or `up` | Navigate path queries |
 | `ctrl+j` or `down` | Navigate path queries |
 | `tab` | Select path query |
+| `shift + up` | Scroll up |
+| `shift + down` | Scroll down |
+| `alt + up` | Scroll up full page |
+| `alt + down` | Scroll down full page |
 | `shift+up` or `ctrl+p` | Scroll up |
 | `shift+down` or `ctrl+n` | Scroll down |
 | `ctrl+u` | Scroll up half page |
@@ -66,6 +70,7 @@ During interactive querying, the following shortcuts can be used:
 | `alt+up` or `ctrl+b` | Scroll up full page |
 | `alt+down` or `ctrl+f` | Scroll down full page |
 | `ctrl+r` | Reload input |
+| `ctrl+y` | Yank selected path to clipboard |
 
 ## gojq support
 
@@ -100,7 +105,7 @@ You need to remap your alt-key to `Esc+` in iTerm2:
 - Set Left Option (⌥ ) Key to `Esc+`
 
 See other suggestions on stackoverflow if the above one doesn't help you:
-https://stackoverflow.com/q/196357/205318
+<https://stackoverflow.com/q/196357/205318>
 
 Another option is to map to `ctrl+j` instead by putting this in your `.zshrc`:
 
