@@ -56,15 +56,21 @@ During interactive querying, the following shortcuts can be used:
 
 | Shortcut | Effect |
 | ------ | -------- |
-| `up` | Navigate path queries |
-| `down` | Navigate path queries |
+| `ctrl+k` or `up` | Navigate path queries |
+| `ctrl+j` or `down` | Navigate path queries |
 | `tab` | Select path query |
 | `shift + up` | Scroll up |
 | `shift + down` | Scroll down |
 | `alt + up` | Scroll up full page |
 | `alt + down` | Scroll down full page |
-| `ctrl+y` | Yank selected path to clipboard |
+| `shift+up` or `ctrl+p` | Scroll up |
+| `shift+down` or `ctrl+n` | Scroll down |
+| `ctrl+u` | Scroll up half page |
+| `ctrl+d` | Scroll down half page |
+| `alt+up` or `ctrl+b` | Scroll up full page |
+| `alt+down` or `ctrl+f` | Scroll down full page |
 | `ctrl+r` | Reload input |
+| `ctrl+y` | Yank selected path to clipboard |
 
 ## gojq support
 
